@@ -5,24 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <script src="main.js"></script>
     <link rel="stylesheet" href="main.css">    
     <title>James House</title>
 </head>
-<body>
-    <img class="right-left-transition">
-        <svg width="300" height="200">
-            <polygon class="transition-slope" points="50,200, 300,200, 300,29"/>
-            <polygon class="transition-slope" points="0,171, 0,0, 250,0"/>
-            Sorry, your browser does not support inline SVG.
-        </svg>
-    </img>
-    <div class="webDev-panel"></div>
-    <img class="left-right-transition"></img>
-    <div class="java-panel"></div>
-    <img class="right-left-transition"></img>
-    <div class="about-panel"></div>
-    <img class="left-right-transition"></img>
-    <div class="contact-panel"></div>
 
+<body>
+    <div class="home-section left-section">
+        <div class="panel left-section__panel home-section__panel"></div>
+        <canvas class="transition left-section__transition home-section__transition" width="1000" height="1000"></canvas>
+    </div>
+
+    <div class="webDev-section right-section">
+        <div class="panel right-section__panel webDev-section__panel"></div>
+        <canvas class="transition right-section__transition webDev-section__transition" width="1000" height="1000"></canvas>        
+    </div>
+
+    <div class="java-section left-section">
+        <div class="panel left-section__panel java-section__panel"></div>
+        <canvas class="transition left-section__transition java-section__transition" width="1000" height="1000"></canvas>
+    </div>
+
+    <div class="about-section right-section">
+        <div class="panel right-section__panel about-section__panel"></div>
+        <canvas class="transition right-section__transition about-section__transition" width="1000" height="1000"></canvas>
+    </div>
+    
+    <div class="contact-section left-section">
+        <div class="panel left-section__panel contact-section__panel"></div>   
+    </div> 
 </body>
+
+<script>
+    drawTransitions();
+</script>
+
 </html>

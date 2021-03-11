@@ -1,16 +1,22 @@
-function drawTransitions(){
-    var canvases = document.getElementsByClassName("transition");
-    console.log(canvases.length);
+function drawTriangles(){
+    var triangles = document.getElementsByClassName("triangle");
+    console.log("adjusting "+triangles.length+" triangles");
 
-    for(let i=0; i<canvases.length; i++){
-        var ctx = canvases[i].getContext('2d');
-        
-        ctx.fillStyle = 'red';
-        ctx.beginPath();
-        ctx.moveTo(0, 0);
-        ctx.lineTo(canvases[i].width, 0);
-        ctx.lineTo(0, canvases[i].height);
-        ctx.closePath();
-        ctx.fill();
+    var panelWidth = document.getElementById("home-section__panel").offsetWidth;
+    console.log("panel width is "+panelWidth);
+
+    for(let i=0; i<triangles.length; i++){
+
+        if (triangles[i].className.includes("topleft") || triangles[i].className.includes("botleft")){
+            triangles[i].style.borderRight=(panelWidth+"px solid transparent");
+        }
+
+        if (triangles[i].className.includes("topright") || triangles[i].className.includes("botright")){
+            triangles[i].style.borderLeft=(panelWidth+"px solid transparent");
+        }
     }
 }
+
+drawTriangles();
+
+window.addEventListener("resize", drawTriangles);

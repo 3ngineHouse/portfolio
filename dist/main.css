@@ -87,80 +87,62 @@
   border-top: 250px solid #8D99AE;
 }
 
-#webDev-section h1 {
+.project-section h1 {
   font-size: 24px;
   text-align: center;
+  margin-bottom: 20px;
 }
-#webDev-section #webDev-section__cardCont {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+.project-section .card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   justify-content: space-around;
   background-color: cadetblue;
 }
-#webDev-section #webDev-section__cardCont .webDev-section__card {
+.project-section .card-container .project-card {
   display: grid;
-  grid-template-columns: 100px 200px 100px;
+  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-rows: 250px 250px;
+  margin: 20px;
 }
+.project-section .card-container .project-card .project-card__image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  align-self: flex-end;
+  margin-bottom: 0px;
+  border: 5px solid #D90429;
+}
+.project-section .card-container .project-card article {
+  font-size: 16px;
+  padding: 20px;
+  background-color: #8D99AE;
+  width: 100%;
+  height: 100%;
+  align-self: flex-start;
+}
+
 #webDev-section #webDev-section__cardCont .webDev-section__card .webDev-section__image {
   grid-column-start: 1;
   grid-column-end: 3;
-  object-fit: cover;
-  width: 100%;
-  max-height: 100%;
-  align-self: flex-end;
-  border-radius: 40px 40px 0px 40px;
-  margin: 40px;
-  margin-bottom: 0px;
-  border: 5px solid #D90429;
+  border-radius: 50px 50px 0px 50px;
 }
 #webDev-section #webDev-section__cardCont .webDev-section__card article {
   grid-column-start: 2;
   grid-column-end: 4;
-  object-fit: cover;
-  width: 100%;
-  max-height: 100%;
-  align-self: flex-end;
-  font-size: 16px;
-  background-color: #8D99AE;
-  align-self: flex-start;
 }
 
-#java-section h1 {
-  font-size: 24px;
-  text-align: center;
-}
-#java-section #java-section__cardCont {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  background-color: cadetblue;
-}
-#java-section #java-section__cardCont .java-section__card {
-  display: grid;
-  grid-template-columns: 100px 200px 100px;
-}
 #java-section #java-section__cardCont .java-section__card .java-section__image {
   grid-column-start: 2;
   grid-column-end: 4;
-  object-fit: cover;
-  width: 100%;
-  max-height: 100%;
-  align-self: flex-end;
-  border-radius: 40px 40px 40px 0px;
-  margin: 40px;
-  margin-bottom: 0px;
-  border: 5px solid #D90429;
+  border-radius: 50px 50px 50px 0px;
 }
 #java-section #java-section__cardCont .java-section__card article {
   grid-column-start: 1;
   grid-column-end: 3;
-  object-fit: cover;
-  width: 100%;
-  max-height: 100%;
-  align-self: flex-end;
-  font-size: 16px;
-  background-color: #8D99AE;
-  align-self: flex-start;
+}
+
+@media only screen and (max-width: 1023px) {
+  .card-container {
+    grid-template-columns: 1fr !important;
+  }
 }
